@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\comments\tests\data;
+namespace indifferentmoviegoer\comments\tests\data;
 
 use yii\db\ActiveRecord;
 
 /**
  * Class PostModel
  *
- * @package yii2mod\comments\tests\data
+ * @package indifferentmoviegoer\comments\tests\data
  */
 class PostModel extends ActiveRecord
 {

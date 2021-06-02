@@ -1,14 +1,14 @@
 <?php
 
-namespace yii2mod\comments\events;
+namespace indifferentmoviegoer\comments\events;
 
 use yii\base\Event;
-use yii2mod\comments\models\CommentModel;
+use indifferentmoviegoer\comments\models\CommentModel;
 
 /**
  * Class CommentEvent
  *
- * @package yii2mod\comments\events
+ * @package indifferentmoviegoer\comments\events
  */
 class CommentEvent extends Event
 {

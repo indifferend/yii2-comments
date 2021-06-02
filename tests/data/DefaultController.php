@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\comments\tests\data;
+namespace indifferentmoviegoer\comments\tests\data;
 
 /**
  * Class DefaultController
  *
- * @package yii2mod\comments\tests\data
+ * @package indifferentmoviegoer\comments\tests\data
  */
-class DefaultController extends \yii2mod\comments\controllers\DefaultController
+class DefaultController extends \indifferentmoviegoer\comments\controllers\DefaultController
 {
     public function behaviors()
     {

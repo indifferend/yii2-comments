@@ -1,14 +1,14 @@
 <?php
 
-namespace yii2mod\comments\traits;
+namespace indifferentmoviegoer\comments\traits;
 
 use Yii;
-use yii2mod\comments\Module;
+use indifferentmoviegoer\comments\Module;
 
 /**
  * Class ModuleTrait
  *
- * @package yii2mod\comments\traits
+ * @package indifferentmoviegoer\comments\traits
  */
 trait ModuleTrait
 {
