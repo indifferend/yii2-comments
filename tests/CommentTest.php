@@ -1,20 +1,20 @@
 <?php
 
-namespace indifferentmoviegoer\comments\tests;
+namespace indifferend\comments\tests;
 
 use Yii;
 use yii\base\Event;
 use yii\helpers\Json;
-use indifferentmoviegoer\comments\models\CommentModel;
-use indifferentmoviegoer\comments\tests\data\DefaultController;
-use indifferentmoviegoer\comments\tests\data\PostModel;
-use indifferentmoviegoer\comments\tests\data\User;
-use indifferentmoviegoer\moderation\enums\Status;
+use indifferend\comments\models\CommentModel;
+use indifferend\comments\tests\data\DefaultController;
+use indifferend\comments\tests\data\PostModel;
+use indifferend\comments\tests\data\User;
+use indifferend\moderation\enums\Status;
 
 /**
  * Class CommentTest
  *
- * @package indifferentmoviegoer\comments\tests
+ * @package indifferend\comments\tests
  */
 class CommentTest extends TestCase
 {

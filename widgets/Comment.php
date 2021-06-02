@@ -1,20 +1,20 @@
 <?php
 
-namespace indifferentmoviegoer\comments\widgets;
+namespace indifferend\comments\widgets;
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\Widget;
 use yii\data\ArrayDataProvider;
 use yii\helpers\Json;
-use indifferentmoviegoer\comments\CommentAsset;
-use indifferentmoviegoer\comments\models\CommentModel;
-use indifferentmoviegoer\comments\traits\ModuleTrait;
+use indifferend\comments\CommentAsset;
+use indifferend\comments\models\CommentModel;
+use indifferend\comments\traits\ModuleTrait;
 
 /**
  * Class Comment
  *
- * @package indifferentmoviegoer\comments\widgets
+ * @package indifferend\comments\widgets
  */
 class Comment extends Widget
 {
@@ -34,7 +34,7 @@ class Comment extends Widget
     /**
      * @var string the view file that will render the comment tree and form for posting comments
      */
-    public $commentView = '@vendor/indifferentmoviegoer/yii2-comments/widgets/views/index';
+    public $commentView = '@vendor/indifferend/yii2-comments/widgets/views/index';
 
     /**
      * @var string comment form id
@@ -105,7 +105,7 @@ class Comment extends Widget
         parent::init();
 
         if (empty($this->model)) {
-            throw new InvalidConfigException(Yii::t('indifferentmoviegoer.comments', 'The "model" property must be set.'));
+            throw new InvalidConfigException(Yii::t('indifferend.comments', 'The "model" property must be set.'));
         }
 
         if (empty($this->pjaxContainerId)) {
@@ -113,7 +113,7 @@ class Comment extends Widget
         }
 
         if (empty($this->model->{$this->entityIdAttribute})) {
-            throw new InvalidConfigException(Yii::t('indifferentmoviegoer.comments', 'The "entityIdAttribute" value for widget model cannot be empty.'));
+            throw new InvalidConfigException(Yii::t('indifferend.comments', 'The "entityIdAttribute" value for widget model cannot be empty.'));
         }
 
         $this->entity = hash('crc32', get_class($this->model));

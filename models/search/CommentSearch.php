@@ -1,14 +1,14 @@
 <?php
 
-namespace indifferentmoviegoer\comments\models\search;
+namespace indifferend\comments\models\search;
 
 use yii\data\ActiveDataProvider;
-use indifferentmoviegoer\comments\models\CommentModel;
+use indifferend\comments\models\CommentModel;
 
 /**
  * Class CommentSearch
  *
- * @package indifferentmoviegoer\comments\models\search
+ * @package indifferend\comments\models\search
  */
 class CommentSearch extends CommentModel
 {

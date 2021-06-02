@@ -4,11 +4,11 @@ use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\helpers\StringHelper;
 use yii\widgets\Pjax;
-use indifferentmoviegoer\moderation\enums\Status;
+use indifferend\moderation\enums\Status;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $searchModel \indifferentmoviegoer\comments\models\search\CommentSearch */
+/* @var $searchModel \indifferend\comments\models\search\CommentSearch */
 /* @var $commentModel \indifferentmoviegoer\comments\models\CommentModel */
 
 $this->title = Yii::t('indifferentmoviegoer.comments', 'Comments Management');

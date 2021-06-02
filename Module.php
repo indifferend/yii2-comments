@@ -1,13 +1,13 @@
 <?php
 
-namespace indifferentmoviegoer\comments;
+namespace indifferend\comments;
 
 use Yii;
 
 /**
  * Class Module
  *
- * @package indifferentmoviegoer\comments
+ * @package indifferend\comments
  */
 class Module extends \yii\base\Module
 {
@@ -17,14 +17,14 @@ class Module extends \yii\base\Module
     public $userIdentityClass;
 
     /**
-     * @var string the class name of the comment model object, by default its indifferentmoviegoer\comments\models\CommentModel
+     * @var string the class name of the comment model object, by default its indifferend\comments\models\CommentModel
      */
-    public $commentModelClass = 'indifferentmoviegoer\comments\models\CommentModel';
+    public $commentModelClass = 'indifferend\comments\models\CommentModel';
 
     /**
      * @var string the namespace that controller classes are in
      */
-    public $controllerNamespace = 'indifferentmoviegoer\comments\controllers';
+    public $controllerNamespace = 'indifferend\comments\controllers';
 
     /**
      * @var bool when admin can edit comments on frontend

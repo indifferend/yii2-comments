@@ -8,7 +8,7 @@
 
 This module provides a comments managing system.
 
-[![Latest Stable Version](https://poser.pugx.org/indifferentmoviegoer/yii2-comments/v/stable)](https://packagist.org/packages/indifferentmoviegoer/yii2-comments) 
+[![Latest Stable Version](https://poser.pugx.org/indifferend/yii2-comments/v/stable)](https://packagist.org/packages/indifferend/yii2-comments) 
 [![Total Downloads](https://poser.pugx.org/indifferentmoviegoer/yii2-comments/downloads)](https://packagist.org/packages/indifferentmoviegoer/yii2-comments) 
 [![License](https://poser.pugx.org/indifferentmoviegoer/yii2-comments/license)](https://packagist.org/packages/indifferentmoviegoer/yii2-comments)
 [![Build Status](https://travis-ci.org/indifferentmoviegoer/yii2-comments.svg?branch=master)](https://travis-ci.org/indifferentmoviegoer/yii2-comments)

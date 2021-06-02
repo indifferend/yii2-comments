@@ -1,6 +1,6 @@
 <?php
 
-namespace indifferentmoviegoer\comments\tests\data;
+namespace indifferend\comments\tests\data;
 
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;

@@ -1,17 +1,17 @@
 <?php
 
-namespace indifferentmoviegoer\comments\controllers;
+namespace indifferend\comments\controllers;
 
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use indifferentmoviegoer\comments\models\CommentModel;
-use indifferentmoviegoer\comments\traits\ModuleTrait;
+use indifferend\comments\models\CommentModel;
+use indifferend\comments\traits\ModuleTrait;
 
 /**
  * Class ManageController
  *
- * @package indifferentmoviegoer\comments\controllers
+ * @package indifferend\comments\controllers
  */
 class ManageController extends Controller
 {
@@ -20,17 +20,17 @@ class ManageController extends Controller
     /**
      * @var string path to index view file, which is used in admin panel
      */
-    public $indexView = '@vendor/indifferentmoviegoer/yii2-comments/views/manage/index';
+    public $indexView = '@vendor/indifferend/yii2-comments/views/manage/index';
 
     /**
      * @var string path to update view file, which is used in admin panel
      */
-    public $updateView = '@vendor/indifferentmoviegoer/yii2-comments/views/manage/update';
+    public $updateView = '@vendor/indifferend/yii2-comments/views/manage/update';
 
     /**
      * @var string search class name for searching
      */
-    public $searchClass = 'indifferentmoviegoer\comments\models\search\CommentSearch';
+    public $searchClass = 'indifferend\comments\models\search\CommentSearch';
 
     /**
      * @var array verb filter config
@@ -100,7 +100,7 @@ class ManageController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->session->setFlash('success', Yii::t('indifferentmoviegoer.comments', 'Comment has been saved.'));
+            Yii::$app->session->setFlash('success', Yii::t('indifferend.comments', 'Comment has been saved.'));
 
             return $this->redirect(['index']);
         }
@@ -122,7 +122,7 @@ class ManageController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->deleteWithChildren();
-        Yii::$app->session->setFlash('success', Yii::t('indifferentmoviegoer.comments', 'Comment has been deleted.'));
+        Yii::$app->session->setFlash('success', Yii::t('indifferend.comments', 'Comment has been deleted.'));
 
         return $this->redirect(['index']);
     }
@@ -145,7 +145,7 @@ class ManageController extends Controller
         if (null !== ($model = $commentModel::findOne($id))) {
             return $model;
         } else {
-            throw new NotFoundHttpException(Yii::t('indifferentmoviegoer.comments', 'The requested page does not exist.'));
+            throw new NotFoundHttpException(Yii::t('indifferend.comments', 'The requested page does not exist.'));
         }
     }
 }

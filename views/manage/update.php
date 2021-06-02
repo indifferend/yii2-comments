@@ -3,15 +3,15 @@
 use yii\helpers\Html;
 use yii\imperavi\Widget;
 use yii\widgets\ActiveForm;
-use indifferentmoviegoer\moderation\enums\Status;
+use indifferend\moderation\enums\Status;
 
 /* @var $this yii\web\View */
-/* @var $model \indifferentmoviegoer\comments\models\CommentModel */
+/* @var $model \indifferend\comments\models\CommentModel */
 /* @var $form yii\widgets\ActiveForm */
 
-$this->title = Yii::t('indifferentmoviegoer.comments', 'Update Comment: {0}', $model->id);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('indifferentmoviegoer.comments', 'Comments Management'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = Yii::t('indifferentmoviegoer.comments', 'Update');
+$this->title = Yii::t('indifferend.comments', 'Update Comment: {0}', $model->id);
+$this->params['breadcrumbs'][] = ['label' => Yii::t('indifferend.comments', 'Comments Management'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = Yii::t('indifferend.comments', 'Update');
 ?>
 <div class="comment-update">
 
@@ -30,8 +30,8 @@ $this->params['breadcrumbs'][] = Yii::t('indifferentmoviegoer.comments', 'Update
         ?>
         <?php echo $form->field($model, 'status')->dropDownList(Status::listData()); ?>
         <div class="form-group">
-            <?php echo Html::submitButton(Yii::t('indifferentmoviegoer.comments', 'Update'), ['class' => 'btn btn-primary']); ?>
-            <?php echo Html::a(Yii::t('indifferentmoviegoer.comments', 'Go Back'), ['index'], ['class' => 'btn btn-default']); ?>
+            <?php echo Html::submitButton(Yii::t('indifferend.comments', 'Update'), ['class' => 'btn btn-primary']); ?>
+            <?php echo Html::a(Yii::t('indifferend.comments', 'Go Back'), ['index'], ['class' => 'btn btn-default']); ?>
         </div>
         <?php ActiveForm::end(); ?>
     </div>

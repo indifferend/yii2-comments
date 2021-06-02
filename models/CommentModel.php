@@ -1,6 +1,6 @@
 <?php
 
-namespace indifferentmoviegoer\comments\models;
+namespace indifferend\comments\models;
 
 use paulzi\adjacencyList\AdjacencyListBehavior;
 use Yii;
@@ -9,11 +9,11 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
-use indifferentmoviegoer\behaviors\PurifyBehavior;
-use indifferentmoviegoer\comments\traits\ModuleTrait;
-use indifferentmoviegoer\moderation\enums\Status;
-use indifferentmoviegoer\moderation\ModerationBehavior;
-use indifferentmoviegoer\moderation\ModerationQuery;
+use indifferend\behaviors\PurifyBehavior;
+use indifferend\comments\traits\ModuleTrait;
+use indifferend\moderation\enums\Status;
+use indifferend\moderation\ModerationBehavior;
+use indifferend\moderation\ModerationQuery;
 
 /**
  * Class CommentModel
@@ -64,7 +64,7 @@ class CommentModel extends ActiveRecord
     {
         return [
             [['entity', 'entityId'], 'required'],
-            ['content', 'required', 'message' => Yii::t('indifferentmoviegoer.comments', 'Comment cannot be blank.')],
+            ['content', 'required', 'message' => Yii::t('indifferend.comments', 'Comment cannot be blank.')],
             [['content', 'entity', 'relatedTo', 'url'], 'string'],
             ['status', 'default', 'value' => Status::APPROVED],
             ['status', 'in', 'range' => Status::getConstantsByName()],
@@ -90,7 +90,7 @@ class CommentModel extends ActiveRecord
                 ->exists();
 
             if (!$parentCommentExist) {
-                $this->addError('content', Yii::t('indifferentmoviegoer.comments', 'Oops, something went wrong. Please try again later.'));
+                $this->addError('content', Yii::t('indifferend.comments', 'Oops, something went wrong. Please try again later.'));
             }
         }
     }
@@ -140,19 +140,19 @@ class CommentModel extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('indifferentmoviegoer.comments', 'ID'),
-            'content' => Yii::t('indifferentmoviegoer.comments', 'Content'),
-            'entity' => Yii::t('indifferentmoviegoer.comments', 'Entity'),
-            'entityId' => Yii::t('indifferentmoviegoer.comments', 'Entity ID'),
-            'parentId' => Yii::t('indifferentmoviegoer.comments', 'Parent ID'),
-            'status' => Yii::t('indifferentmoviegoer.comments', 'Status'),
-            'level' => Yii::t('indifferentmoviegoer.comments', 'Level'),
-            'createdBy' => Yii::t('indifferentmoviegoer.comments', 'Created by'),
-            'updatedBy' => Yii::t('indifferentmoviegoer.comments', 'Updated by'),
-            'relatedTo' => Yii::t('indifferentmoviegoer.comments', 'Related to'),
-            'url' => Yii::t('indifferentmoviegoer.comments', 'Url'),
-            'createdAt' => Yii::t('indifferentmoviegoer.comments', 'Created date'),
-            'updatedAt' => Yii::t('indifferentmoviegoer.comments', 'Updated date'),
+            'id' => Yii::t('indifferend.comments', 'ID'),
+            'content' => Yii::t('indifferend.comments', 'Content'),
+            'entity' => Yii::t('indifferend.comments', 'Entity'),
+            'entityId' => Yii::t('indifferend.comments', 'Entity ID'),
+            'parentId' => Yii::t('indifferend.comments', 'Parent ID'),
+            'status' => Yii::t('indifferend.comments', 'Status'),
+            'level' => Yii::t('indifferend.comments', 'Level'),
+            'createdBy' => Yii::t('indifferend.comments', 'Created by'),
+            'updatedBy' => Yii::t('indifferend.comments', 'Updated by'),
+            'relatedTo' => Yii::t('indifferend.comments', 'Related to'),
+            'url' => Yii::t('indifferend.comments', 'Url'),
+            'createdAt' => Yii::t('indifferend.comments', 'Created date'),
+            'updatedAt' => Yii::t('indifferend.comments', 'Updated date'),
         ];
     }
 
