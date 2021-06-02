@@ -29,7 +29,7 @@ class Module extends \yii\base\Module
     /**
      * @var bool when admin can edit comments on frontend
      */
-    public $enableInlineEdit = false;
+    public $enableInlineEdit = true;
 
     /**
      * {@inheritdoc}
