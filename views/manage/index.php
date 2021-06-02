@@ -9,9 +9,9 @@ use indifferend\moderation\enums\Status;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 /* @var $searchModel \indifferend\comments\models\search\CommentSearch */
-/* @var $commentModel \indifferentmoviegoer\comments\models\CommentModel */
+/* @var $commentModel \indifferend\comments\models\CommentModel */
 
-$this->title = Yii::t('indifferentmoviegoer.comments', 'Comments Management');
+$this->title = Yii::t('indifferend.comments', 'Comments Management');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="comments-index">
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $model->getAuthorName();
                 },
                 'filter' => $commentModel::getAuthors(),
-                'filterInputOptions' => ['prompt' => Yii::t('indifferentmoviegoer.comments', 'Select Author'), 'class' => 'form-control'],
+                'filterInputOptions' => ['prompt' => Yii::t('indifferend.comments', 'Select Author'), 'class' => 'form-control'],
             ],
             [
                 'attribute' => 'status',
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Status::getLabel($model->status);
                 },
                 'filter' => Status::listData(),
-                'filterInputOptions' => ['prompt' => Yii::t('indifferentmoviegoer.comments', 'Select Status'), 'class' => 'form-control'],
+                'filterInputOptions' => ['prompt' => Yii::t('indifferend.comments', 'Select Status'), 'class' => 'form-control'],
             ],
             [
                 'attribute' => 'createdAt',
@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'template' => '{view}{update}{delete}',
                 'buttons' => [
                     'view' => function ($url, $model, $key) {
-                        $title = Yii::t('indifferentmoviegoer.comments', 'View');
+                        $title = Yii::t('indifferend.comments', 'View');
                         $options = [
                             'title' => $title,
                             'aria-label' => $title,

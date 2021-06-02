@@ -9,14 +9,14 @@
 This module provides a comments managing system.
 
 [![Latest Stable Version](https://poser.pugx.org/indifferend/yii2-comments/v/stable)](https://packagist.org/packages/indifferend/yii2-comments) 
-[![Total Downloads](https://poser.pugx.org/indifferentmoviegoer/yii2-comments/downloads)](https://packagist.org/packages/indifferentmoviegoer/yii2-comments) 
-[![License](https://poser.pugx.org/indifferentmoviegoer/yii2-comments/license)](https://packagist.org/packages/indifferentmoviegoer/yii2-comments)
-[![Build Status](https://travis-ci.org/indifferentmoviegoer/yii2-comments.svg?branch=master)](https://travis-ci.org/indifferentmoviegoer/yii2-comments)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/indifferentmoviegoer/yii2-comments/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/indifferentmoviegoer/yii2-comments/?branch=master)
+[![Total Downloads](https://poser.pugx.org/indifferend/yii2-comments/downloads)](https://packagist.org/packages/indifferend/yii2-comments) 
+[![License](https://poser.pugx.org/indifferend/yii2-comments/license)](https://packagist.org/packages/indifferend/yii2-comments)
+[![Build Status](https://travis-ci.org/indifferend/yii2-comments.svg?branch=master)](https://travis-ci.org/indifferend/yii2-comments)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/indifferend/yii2-comments/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/indifferend/yii2-comments/?branch=master)
 
 ## Support us
 
-Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/indifferentmoviegoer). 
+Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/indifferend). 
 All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 Installation
@@ -27,13 +27,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist indifferentmoviegoer/yii2-comments "*"
+php composer.phar require --prefer-dist indifferend/yii2-comments "*"
 ```
 
 or add
 
 ```
-"indifferentmoviegoer/yii2-comments": "*"
+"indifferend/yii2-comments": "*"
 ```
 
 to the require section of your composer.json.
@@ -46,7 +46,7 @@ Configuration
 
 Before using Comments Widget, we'll also need to prepare the database.
 ```php
-php yii migrate --migrationPath=@vendor/indifferentmoviegoer/yii2-comments/migrations
+php yii migrate --migrationPath=@vendor/indifferend/yii2-comments/migrations
 ```
 
 **Module setup**
@@ -55,11 +55,11 @@ To access the module, you need to add the following code to your application con
 ```php
 'modules' => [
     'comment' => [
-        'class' => 'indifferentmoviegoer\comments\Module',
+        'class' => 'indifferend\comments\Module',
     ],
 ]
 ```
->**NOTE:** Module id must be `comment` and not otherwise. This is because it is referred [somewhere](https://github.com/indifferentmoviegoer/yii2-comments/blob/master/traits/ModuleTrait.php#L20) in the code with such name. A PR to fix it to use configured module id is welcome.
+>**NOTE:** Module id must be `comment` and not otherwise. This is because it is referred [somewhere](https://github.com/indifferend/yii2-comments/blob/master/traits/ModuleTrait.php#L20) in the code with such name. A PR to fix it to use configured module id is welcome.
 
 Now you can access to management section through the following URL:
 http://localhost/path/to/index.php?r=comments/index
@@ -96,7 +96,7 @@ Usage
 // the model to which are added comments, for example:
 $model = Post::find()->where(['title' => 'some post title'])->one();
 
-<?php echo \indifferentmoviegoer\comments\widgets\Comment::widget([
+<?php echo \indifferend\comments\widgets\Comment::widget([
     'model' => $model,
 ]); ?>
 ```
@@ -104,7 +104,7 @@ $model = Post::find()->where(['title' => 'some post title'])->one();
 **You can use your own template for render comments:**
 
   ```php
-<?php echo \indifferentmoviegoer\comments\widgets\Comment::widget([
+<?php echo \indifferend\comments\widgets\Comment::widget([
     'model' => $model,
     'commentView' => '@app/views/site/comments/index' // path to your template
 ]); ?>
@@ -112,11 +112,11 @@ $model = Post::find()->where(['title' => 'some post title'])->one();
   
 **Use the following code for multiple widgets on the same page:**
   ```php
-<?php echo \indifferentmoviegoer\comments\widgets\Comment::widget([
+<?php echo \indifferend\comments\widgets\Comment::widget([
         'model' => $model,
 ]); ?>
 
-<?php echo \indifferentmoviegoer\comments\widgets\Comment::widget([
+<?php echo \indifferend\comments\widgets\Comment::widget([
         'model' => $model2,
         'formId' => 'comment-form2',
         'pjaxContainerId' => 'unique-pjax-container-id'
@@ -125,7 +125,7 @@ $model = Post::find()->where(['title' => 'some post title'])->one();
   
 **To enable the pagination for comments list use the following code:**
 ```php
-<?php echo \indifferentmoviegoer\comments\widgets\Comment::widget([
+<?php echo \indifferend\comments\widgets\Comment::widget([
       'model' => $model,
       'dataProviderConfig' => [
           'pagination' => [
@@ -137,7 +137,7 @@ $model = Post::find()->where(['title' => 'some post title'])->one();
 
 **Advanced example:**
 ```php
-<?php echo \indifferentmoviegoer\comments\widgets\Comment::widget([
+<?php echo \indifferend\comments\widgets\Comment::widget([
       'model' => $model,
       'relatedTo' => 'User ' . \Yii::$app->user->identity->username . ' commented on the page ' . \yii\helpers\Url::current(),
       'maxLevel' => 2,
@@ -159,10 +159,10 @@ You may use the following events:
 ```php
 'modules' => [
     'comment' => [
-        'class' => 'indifferentmoviegoer\comments\Module',
+        'class' => 'indifferend\comments\Module',
         'controllerMap' => [
             'default' => [
-                'class' => 'indifferentmoviegoer\comments\controllers\DefaultController',
+                'class' => 'indifferend\comments\controllers\DefaultController',
                 'on beforeCreate' => function ($event) {
                     $event->getCommentModel();
                     // your custom code
@@ -207,7 +207,7 @@ Available events are:
 
 ## Internationalization
 
-All text and messages introduced in this extension are translatable under category 'indifferentmoviegoer.comments'.
+All text and messages introduced in this extension are translatable under category 'indifferend.comments'.
 You may use translations provided within this extension, using following application configuration:
 
 ```php
@@ -215,9 +215,9 @@ return [
     'components' => [
         'i18n' => [
             'translations' => [
-                'indifferentmoviegoer.comments' => [
+                'indifferend.comments' => [
                     'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@indifferentmoviegoer/comments/messages',
+                    'basePath' => '@indifferend/comments/messages',
                 ],
                 // ...
             ],

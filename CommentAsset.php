@@ -1,20 +1,20 @@
 <?php
 
-namespace indifferentmoviegoer\comments;
+namespace indifferend\comments;
 
 use yii\web\AssetBundle;
 
 /**
  * Class CommentAsset
  *
- * @package indifferentmoviegoer\comments
+ * @package indifferend\comments
  */
 class CommentAsset extends AssetBundle
 {
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@vendor/indifferentmoviegoer/yii2-comments/assets';
+    public $sourcePath = '@vendor/indifferend/yii2-comments/assets';
 
     /**
      * @inheritdoc

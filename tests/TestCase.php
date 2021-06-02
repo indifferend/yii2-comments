@@ -1,6 +1,6 @@
 <?php
 
-namespace indifferentmoviegoer\comments\tests;
+namespace indifferend\comments\tests;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -49,22 +49,22 @@ class TestCase extends \PHPUnit\Framework\TestCase
                     'scriptUrl' => 'index.php',
                 ],
                 'user' => [
-                    'identityClass' => 'indifferentmoviegoer\comments\tests\data\User',
+                    'identityClass' => 'indifferend\comments\tests\data\User',
                 ],
                 'i18n' => [
                     'translations' => [
-                        'indifferentmoviegoer.comments' => [
+                        'indifferend.comments' => [
                             'class' => 'yii\i18n\PhpMessageSource',
-                            'basePath' => '@indifferentmoviegoer/comments/messages',
+                            'basePath' => '@indifferend/comments/messages',
                         ],
                     ],
                 ],
             ],
             'modules' => [
                 'comment' => [
-                    'class' => 'indifferentmoviegoer\comments\Module',
+                    'class' => 'indifferend\comments\Module',
                     'userIdentityClass' => '',
-                    'controllerNamespace' => 'indifferentmoviegoer\comments\tests\data',
+                    'controllerNamespace' => 'indifferend\comments\tests\data',
                 ],
             ],
         ], $config));

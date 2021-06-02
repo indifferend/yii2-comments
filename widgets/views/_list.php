@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use indifferentmoviegoer\editable\Editable;
+use indifferend\editable\Editable;
 
 /* @var $this \yii\web\View */
-/* @var $model \indifferentmoviegoer\comments\models\CommentModel */
+/* @var $model \indifferend\comments\models\CommentModel */
 /* @var $maxLevel null|integer comments max level */
 ?>
 <li class="comment" id="comment-<?php echo $model->id; ?>">
@@ -16,10 +16,10 @@ use indifferentmoviegoer\editable\Editable;
         <div class="comment-details">
             <div class="comment-action-buttons">
                 <?php if (Yii::$app->getUser()->can('admin')) : ?>
-                    <?php echo Html::a('<span class="glyphicon glyphicon-trash"></span> ' . Yii::t('indifferentmoviegoer.comments', 'Delete'), '#', ['class' => 'delete-comment-btn', 'data' => ['action' => 'delete', 'url' => Url::to(['/comment/default/delete', 'id' => $model->id]), 'comment-id' => $model->id]]); ?>
+                    <?php echo Html::a('<span class="glyphicon glyphicon-trash"></span> ' . Yii::t('indifferend.comments', 'Delete'), '#', ['class' => 'delete-comment-btn', 'data' => ['action' => 'delete', 'url' => Url::to(['/comment/default/delete', 'id' => $model->id]), 'comment-id' => $model->id]]); ?>
                 <?php endif; ?>
                 <?php if (!Yii::$app->user->isGuest && ($model->level < $maxLevel || is_null($maxLevel))) : ?>
-                    <?php echo Html::a("<span class='glyphicon glyphicon-share-alt'></span> " . Yii::t('indifferentmoviegoer.comments', 'Reply'), '#', ['class' => 'reply-comment-btn', 'data' => ['action' => 'reply', 'comment-id' => $model->id]]); ?>
+                    <?php echo Html::a("<span class='glyphicon glyphicon-share-alt'></span> " . Yii::t('indifferend.comments', 'Reply'), '#', ['class' => 'reply-comment-btn', 'data' => ['action' => 'reply', 'comment-id' => $model->id]]); ?>
                 <?php endif; ?>
             </div>
             <div class="comment-author-name">

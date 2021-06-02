@@ -1,13 +1,13 @@
 <?php
 
-namespace indifferentmoviegoer\comments\tests\data;
+namespace indifferend\comments\tests\data;
 
 /**
  * Class DefaultController
  *
- * @package indifferentmoviegoer\comments\tests\data
+ * @package indifferend\comments\tests\data
  */
-class DefaultController extends \indifferentmoviegoer\comments\controllers\DefaultController
+class DefaultController extends \indifferend\comments\controllers\DefaultController
 {
     public function behaviors()
     {
